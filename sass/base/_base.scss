@@ -10,14 +10,7 @@ html {
 
 body {
   background-color: var(--primary-color);
-  @include respond(tab-land) {
-    background-color: yellow;
-    font-size: 80%;
-  }
-
-  @include respond(phone) {
-    background-color: blue;
-  }
+  font-size: 1.8rem;
 }
 
 h1 {

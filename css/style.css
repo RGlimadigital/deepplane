@@ -54,17 +54,7 @@ html {
 
 body {
   background-color: var(--primary-color);
-}
-@media (max-width: 75em) {
-  body {
-    background-color: yellow;
-    font-size: 80%;
-  }
-}
-@media (max-width: 36em) {
-  body {
-    background-color: blue;
-  }
+  font-size: 1.8rem;
 }
 
 h1 {
@@ -153,6 +143,49 @@ p {
   src: local("Stolzl Medium"), local("Stolzl-Medium"), url("Stolzl-Medium.eot?#iefix") format("embedded-opentype"), url("Stolzl-Medium.woff2") format("woff2"), url("Stolzl-Medium.woff") format("woff"), url("Stolzl-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+}
+.breve {
+  width: 100wh;
+  height: 100vh;
+  color: var(--color-white);
+  background-image: linear-gradient(to right, var(--color-black), 80%, var(--color-grey-dark-2));
+}
+
+.breve-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.breve-header {
+  height: 5rem;
+  background-color: var(--color-grey-light-4);
+}
+
+.breve-content {
+  display: flex;
+  flex-grow: 1;
+  padding: 0rem 9rem;
+}
+
+.breve-content-left {
+  width: 30rem;
+  background-color: var(--color-grey-light-1);
+}
+
+.breve-content-center {
+  flex-grow: 1;
+}
+
+.breve-content-right {
+  width: 30rem;
+  background-color: var(--color-grey-light-1);
+}
+
+.breve-footer {
+  height: 6rem;
+  background-color: var(--color-grey-light-3);
 }
 
 /*# sourceMappingURL=style.css.map */
