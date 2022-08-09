@@ -145,47 +145,130 @@ p {
   font-style: normal;
 }
 .breve {
-  width: 100wh;
-  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   color: var(--color-white);
   background-image: linear-gradient(to right, var(--color-black), 80%, var(--color-grey-dark-2));
 }
 
 .breve-container {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .breve-header {
-  height: 5rem;
-  background-color: var(--color-grey-light-4);
+  min-height: 5rem;
+  padding: 0rem 9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.breve-header--link {
+  text-decoration: none;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 .breve-content {
   display: flex;
-  flex-grow: 1;
   padding: 0rem 9rem;
+  flex-grow: 1;
 }
 
 .breve-content-left {
-  width: 30rem;
-  background-color: var(--color-grey-light-1);
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.breve-content-left--bottom {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 30rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.breve-content-left--bottom-embreve {
+  padding: 1.5rem 0rem;
+  text-align: right;
+  margin-right: 1rem;
+}
+.breve-content-left--bottom-coming {
+  padding: 1.5rem 0rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+.breve-content-left--bottom-pronto {
+  padding: 1.5rem 0rem;
+  margin-right: 1rem;
+  text-align: right;
 }
 
 .breve-content-center {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.center-superior {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+.center-superior--ano {
+  position: absolute;
+  right: 10rem;
+  bottom: 4rem;
+  display: flex;
+  font-family: "Playfair Display", serif;
+  opacity: 0.8;
+  letter-spacing: 1rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 4rem;
+  font-size: 5rem;
+}
+
+.center-inferior {
+  margin-top: -3rem;
+  min-height: 30rem;
+}
+.center-inferior--box {
+  display: flex;
+  justify-content: flex-end;
+}
+.center-inferior--text {
+  text-align: center;
+  font-size: 4rem;
+  opacity: 0.8;
+  letter-spacing: 0.2rem;
+}
+.center-inferior--box-assinatura {
+  margin-top: -6rem;
+  width: 45%;
 }
 
 .breve-content-right {
-  width: 30rem;
-  background-color: var(--color-grey-light-1);
+  flex: 0 0 20%;
 }
 
 .breve-footer {
+  color: var(--color-grey-light-3);
   height: 6rem;
-  background-color: var(--color-grey-light-3);
+  background-color: var(--color-grey-dark-3);
+  font-family: "GT America";
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
