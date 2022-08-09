@@ -1,11 +1,41 @@
-:root {
-  --primary-color: red;
-}
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
 }
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--primary-color);
+  @include respond(tab-land) {
+    background-color: yellow;
+    font-size: 80%;
+  }
+
+  @include respond(phone) {
+    background-color: blue;
+  }
+}
+
+h1 {
+  font-family: "Haigrast";
+  font-size: 10rem;
+  color: white;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding-top: 5rem;
+}
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  color: var(--color-grey-dark-2);
+  font-size: 5rem;
+}
+
+p {
+  font-family: "GT America";
+  font-size: 2.3rem;
 }

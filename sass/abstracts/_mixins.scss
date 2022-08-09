@@ -1,0 +1,49 @@
+//Centralizando com flex
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Media Query Manager
+/*
+
+0 - 600px;      Phones -  37.5em
+600 - 900px;    Tablet portrait - 57em
+900 - 1200px;   Tablet landscape - 75em
+[1200 - 1800]   Normal Style apply
+1800px +;       Big Screens Desktops - 112.5em
+
+
+$breakpont argument choices:
+- phone
+- tab-port
+- tab-land
+- big-deskt
+
+1em = 16px;
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 36em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 57em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-deskt {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

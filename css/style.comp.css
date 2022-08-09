@@ -1,5 +1,15 @@
+/*
+
+0 - 600px;      Phones
+600 - 900px;    Tablet portrait 
+900 - 1200px;   Tablet landscape
+[1200 - 1800]   Normal Style apply
+1800px +;       Big Screens Desktops
+
+*/
 :root {
   --primary-color: red;
+  --secondary-color: green;
 }
 
 * {
@@ -9,4 +19,9 @@
 
 body {
   background-color: var(--primary-color);
+}
+@media (max-width: 600px) {
+  body {
+    background-color: var(--secondary-color);
+  }
 }
