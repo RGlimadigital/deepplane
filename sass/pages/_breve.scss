@@ -132,11 +132,15 @@
 .breve-footer {
   color: var(--color-grey-light-3);
   height: 6rem;
-  background-color: var(--color-grey-dark-3);
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
   font-family: "GT America";
   display: flex;
   justify-content: center;
   align-items: center;
+  & > span {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 .breve-procedimentos {
   width: 100%;
