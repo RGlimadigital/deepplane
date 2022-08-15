@@ -39,6 +39,7 @@ $breakpont argument choices:
   --gradient-primary-dark: #ffce44;
   --gradient-secondary-light: #0063f9;
   --gradient-secondary-dark: #063068;
+  --shawdow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -144,6 +145,56 @@ p {
   font-weight: 500;
   font-style: normal;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--color-white);
+  height: 40rem;
+}
+.header--navbar {
+  padding: 0rem 9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+}
+.header--navbar-logo {
+  height: 2.4rem;
+}
+.header--navbar-icon {
+  height: 2.4rem;
+  width: 5rem;
+  fill: var(--color-primary);
+  cursor: pointer;
+}
+.header--navbar-name-link {
+  display: flex;
+  align-items: center;
+}
+.header--navbar-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.content {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 0 9rem;
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: var(--color-grey-light-1);
+  min-height: 30rem;
+}
+
 .breve {
   max-width: 100vw;
   max-height: 100vh;
@@ -179,7 +230,7 @@ p {
 }
 
 .breve-content-left {
-  width: 25%;
+  width: 23%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -259,14 +310,53 @@ p {
 
 .breve-content-right {
   flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .breve-footer {
   color: var(--color-grey-light-3);
   height: 6rem;
-  background-color: var(--color-grey-dark-3);
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
   font-family: "GT America";
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.breve-footer > span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breve-procedimentos {
+  width: 100%;
+  min-height: 40rem;
+}
+.breve-procedimentos--divisor {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.breve-procedimentos--lista-item {
+  padding: 1rem 0rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 1.4rem;
+}
+
+.divisor-linha--esquerda {
+  flex: 1;
+  background-color: var(--primary-color);
+  height: 2px;
+}
+
+.divisor-texto--direita {
+  margin-left: 1rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  letter-spacing: 0.3rem;
+  font-weight: 100;
+  font-size: 1.3rem;
 }
